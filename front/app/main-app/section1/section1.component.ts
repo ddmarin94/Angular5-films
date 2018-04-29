@@ -14,7 +14,7 @@ export class Section1Component implements OnInit {
 
   public filmsProvider: Observable<any>;
   public sectionSelected: Section;
-
+  public foundFilm: boolean = false;
   private routerProvider: ISubscription;
 
   constructor(

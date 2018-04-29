@@ -1,6 +1,24 @@
-<div>
-  filter
+<ng-template #moviesByCategory>
+    <div>filter</div>
+    <div *ngFor="let film of (filmsProvider | async)?.results">
+      <pre>{{film | json}}</pre>
+    </div>
+</ng-template>
+
+<ng-template #searchFilmCategory>
+  <div>search-bar</div>
+  search
+  <ng-container *ngIf="foundFilm">
+    <div *ngFor="let film of (filmsProvider | async)?.results">
+      <pre>{{film | json}}</pre>
+    </div>
+  </ng-container>
+</ng-template>
+
+<div *ngIf="sectionSelected !== 'search-film'">
+  <ng-container *ngTemplateOutlet="moviesByCategory"></ng-container>
 </div>
-<div *ngFor="let movie of (filmsProvider | async)?.results">
-  <pre>{{movie | json}}</pre>
+
+<div *ngIf="sectionSelected === 'search-film'">
+  <ng-container *ngTemplateOutlet="searchFilmCategory"></ng-container>
 </div>
