@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { CardComponent } from './card/card.component';
 import { MenuComponent } from './menu/menu.component';
+import { BtnComponent } from './btn/btn.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { MenuComponent } from './menu/menu.component';
   declarations: [
     SearchBarComponent,
     CardComponent,
-    MenuComponent
+    MenuComponent,
+    BtnComponent
   ]
 })
 export class ComponentsModule { }

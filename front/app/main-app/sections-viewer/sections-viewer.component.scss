@@ -1,0 +1,23 @@
+:host {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.section-films {
+  width: 100%;
+  height: 100%;
+  padding: 15px 30px;
+  .films {
+    display: flex;
+    flex-wrap: wrap;
+    .film {
+      max-width: 300px;
+      .film-poster {
+        width: 210px;
+        height: 315px;
+      }
+    }
+  }
+}
