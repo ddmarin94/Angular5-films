@@ -6,7 +6,7 @@ import { HomeComponent } from './main-app/main-app/main-app.component';
 
 // Main Sections:
 
-import { Section1Component } from './main-app/section1/section1.component';
+import { SectionsViewerComponent } from './main-app/sections-viewer/sections-viewer.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'app', pathMatch: 'full' },
@@ -17,7 +17,7 @@ const appRoutes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'movies/popular' },
       {
           path: 'movies/:id',
-          component: Section1Component,
+          component: SectionsViewerComponent,
       },
     ],
   },

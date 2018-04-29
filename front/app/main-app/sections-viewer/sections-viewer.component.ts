@@ -6,11 +6,11 @@ import { Section } from '../../types/types';
 import { Router, NavigationEnd, ActivatedRoute, Event } from '@angular/router';
 
 @Component({
-  selector: 'app-section1',
-  templateUrl: './section1.component.html',
-  styleUrls: ['./section1.component.scss']
+  selector: 'sections-viewer',
+  templateUrl: './sections-viewer.component.html',
+  styleUrls: ['./sections-viewer.component.scss']
 })
-export class Section1Component implements OnInit {
+export class SectionsViewerComponent implements OnInit {
 
   public filmsProvider: Observable<any>;
   public sectionSelected: Section;

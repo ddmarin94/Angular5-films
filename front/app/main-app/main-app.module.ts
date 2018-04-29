@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Section1Component } from './section1/section1.component';
+import { SectionsViewerComponent } from './sections-viewer/sections-viewer.component';
 import { HomeComponent } from './main-app/main-app.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ComponentsModule } from '../components/components.module';
@@ -14,8 +14,8 @@ import { BrowserModule } from '@angular/platform-browser';
     AppRoutingModule,
     BrowserModule
   ],
-  exports: [Section1Component, HomeComponent],
-  declarations: [Section1Component, HomeComponent],
+  exports: [SectionsViewerComponent, HomeComponent],
+  declarations: [SectionsViewerComponent, HomeComponent],
   providers: [FilmsService],
 })
 export class MainAppModule { }
