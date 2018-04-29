@@ -1,3 +1,7 @@
-<div (click)="buttonClicked()" [class.disable]="disable" [ngClass]="size">
+<div class="button"
+     (click)="buttonClicked()"
+     [class.disable]="disable"
+     [class.secondary]="secondary"
+     [ngClass]="size">
   <ng-content></ng-content>
 </div>

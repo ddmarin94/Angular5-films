@@ -2,7 +2,8 @@
     <div style="display: block;">filter</div>
     <div class="films">
       <div class="film" *ngFor="let film of (filmsProvider | async)?.results">
-        <img class="film-poster" [src]="'https://image.tmdb.org/t/p/w500' + film.poster_path" alt="">
+        <card [cardTitle]="'Title'" [cardImage]="'https://image.tmdb.org/t/p/w500' + film.poster_path" ></card>
+        <!-- <img class="film-poster" [src]="'https://image.tmdb.org/t/p/w500' + film.poster_path" alt=""> -->
       </div>
     </div>
 </ng-template>

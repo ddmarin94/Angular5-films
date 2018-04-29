@@ -10,6 +10,7 @@ export class BtnComponent {
   @Output() action = new EventEmitter<any>();
 
   @Input() disable: boolean = false;
+  @Input() secondary: boolean = false;
   @Input() size: 'small' | 'medium' | 'big' = 'small';
 
   buttonClicked():void {

@@ -1,11 +1,13 @@
 <div class="card-container">
-  <div class="card-poster">
-
+  <div class="card-image-container">
+    <img class="card-image" [src]="cardImage" alt="cardTitle">
   </div>
-  <div class="card-title">
-
-  </div>
-  <div class="card-button">
-
+  <div class="card-info">
+    <div class="card-title">
+      <h3 class="card-title-text">{{cardTitle}}</h3>
+    </div>
+    <div class="card-button">
+      <btn class="button" (action)="actionClicked()" [disable]="isCardButtonDisable" >More details</btn>
+    </div>
   </div>
 </div>

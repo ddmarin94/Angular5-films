@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-card',
+  selector: 'card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
 
+  @Input() isCardButtonDisable: boolean = false;
+  @Input() cardTitle: string = '';
+  @Input() cardImage: string = '';
+
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  actionClicked() {
+    console.log('action clicked');
   }
 
 }

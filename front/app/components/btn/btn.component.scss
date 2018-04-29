@@ -1,0 +1,36 @@
+:host {
+  position: relative;
+  display: inline-block;
+}
+
+.button {
+  background-color: #34495E;
+  border: 1px solid #17202A;
+  color: #FFF;
+  padding: 10px 5px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  &.disable {
+    border-color: #B2BABB;
+    background-color: #F2F4F4;
+    color: #B2BABB;
+    cursor: default;
+  }
+  &.small {
+    height: 30px;
+  }
+  &.medium {
+    height: 50px;
+  }
+  &.big {
+    height: 70px;
+  }
+  &.secondary {
+    background-color: #808B96;
+    border: 1px solid #34495E;
+  }
+}
