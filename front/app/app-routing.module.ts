@@ -14,23 +14,22 @@ const appRoutes: Routes = [
     path: 'app',
     component: HomeComponent,
     children: [
-      { path: '', pathMatch: 'full', redirectTo: 'enter' },
+      { path: '', pathMatch: 'full', redirectTo: 'movies/popular' },
       {
-          path: 'enter',
+          path: 'movies/:id',
           component: Section1Component,
       },
     ],
-  }
+  },
 ]
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(
-      appRoutes
-    )
+    RouterModule.forRoot(appRoutes),
   ],
   exports: [RouterModule],
-  declarations: []
+  declarations: [],
 })
+
 export class AppRoutingModule { }

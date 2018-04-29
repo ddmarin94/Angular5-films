@@ -5,12 +5,14 @@ import { HomeComponent } from './main-app/main-app.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ComponentsModule } from '../components/components.module';
 import { FilmsService } from '../films-service/films.service';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
     ComponentsModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule
   ],
   exports: [Section1Component, HomeComponent],
   declarations: [Section1Component, HomeComponent],

@@ -1,1 +1,6 @@
-<p>section1 works!</p>
+<div>
+  filter
+</div>
+<div *ngFor="let movie of (filmsProvider | async)?.results">
+  <pre>{{movie | json}}</pre>
+</div>
