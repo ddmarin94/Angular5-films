@@ -15,6 +15,7 @@ export class SectionsViewerComponent implements OnInit {
   public filmsProvider: Observable<any>;
   public sectionSelected: Section;
   public foundFilm: boolean = false;
+  public page:number = 1;
   private routerProvider: ISubscription;
 
   constructor(
@@ -39,17 +40,22 @@ export class SectionsViewerComponent implements OnInit {
    }
 
    setSectionData(sectionSelected:Section):void {
-       this.filmsProvider = this.filmService.moviesByCategory(sectionSelected);
+     this.filmsProvider = this.filmService.moviesByCategory(sectionSelected, this.page);
    }
 
    setSearchFilm(sectionSelected: 'search-film'):void {
-       this.filmsProvider = this.filmService.moviesByCategory(sectionSelected);
+     // this.filmsProvider = this.filmService.moviesByCategory(sectionSelected);
+   }
+
+   nextPage(sectionSelected) {
+     this.page = this.page +1;
+     this.filmsProvider = this.filmService.moviesByCategory(sectionSelected, this.page);
    }
 
    changeSection(event: Section):void {
-       this.sectionSelected = event;
-       if(this.sectionSelected !== 'search-film') {
-         this.setSectionData(this.sectionSelected);
-       }
+     this.sectionSelected = event;
+     if(this.sectionSelected !== 'search-film') {
+       this.setSectionData(this.sectionSelected);
+     }
    }
 }

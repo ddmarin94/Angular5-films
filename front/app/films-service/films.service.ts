@@ -9,8 +9,8 @@ export class FilmsService {
 
   constructor(private httpClient: HttpClient) { }
 
-  moviesByCategory(category: Section):Observable<any> {
-    return this.httpClient.get(`https://api.themoviedb.org/3/movie/${category}?api_key=${environment.apiKey}&language=en-US&page=1`);
+  moviesByCategory(category: Section, page:number):Observable<any> {
+    return this.httpClient.get(`https://api.themoviedb.org/3/movie/${category}?api_key=${environment.apiKey}&language=en-US&page=${page}`);
   }
 
   searchOneFilm(filmName:string):Observable<any> {
